@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bvp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/activity_main_toolbar_name"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingStart="@dimen/dimen_10"
+            android:text="Video"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <com.halilibo.bettervideoplayer.BetterVideoPlayer
+        android:id="@+id/bvp"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        bvp:bvp_autoPlay="true"
+        bvp:bvp_captionColor="@android:color/holo_orange_light"
+        bvp:bvp_captionSize="20sp"
+        bvp:bvp_hideControlsOnPlay="true"
+        bvp:bvp_loadingStyle="RotatingPlane"
+        bvp:bvp_showBottomProgressBar="true"
+        bvp:bvp_showTotalDuration="false"
+        bvp:bvp_title="Big Buck Bunny" />
+
+</LinearLayout>

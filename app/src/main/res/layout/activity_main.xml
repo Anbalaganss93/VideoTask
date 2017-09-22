@@ -6,38 +6,87 @@
     android:orientation="vertical"
     tools:context="com.testsample.MainActivity">
 
-    <EditText
-        android:id="@+id/editText1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
-        android:ems="10"
-        android:hint="Email address" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent">
 
-    <EditText
-        android:id="@+id/editText2"
+        <TextView
+            android:id="@+id/activity_main_toolbar_name"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingStart="@dimen/dimen_10"
+            android:text="Video"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_15">
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
-        android:layout_toRightOf="@+id/button1"
-        android:text="New User" />
+        <EditText
+            android:id="@+id/editText1"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:hint="Email address"
+            android:maxLines="1"
+            android:padding="@dimen/dimen_10"
+            android:textColorHint="@color/colorAccent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
-        android:layout_toRightOf="@+id/button1"
-        android:text="Login" />
+        <EditText
+            android:id="@+id/editText2"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:background="@drawable/edit_background"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="@dimen/dimen_10"
+            android:textColorHint="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_toRightOf="@+id/button1"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="Login"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_42"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_toRightOf="@+id/button1"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="Regiser"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
